@@ -11,7 +11,7 @@ app.use(express.json());
 
 // Test route
 app.get("/", (req, res) => {
-  res.send("Employee Management System API");
+  res.send("Employee Management System API running...");
 });
 
 app.use("/api/auth", authRoutes);
