@@ -15,7 +15,7 @@ const authMiddleware = async (req, res, next) => {
         if (!token) {
             return res.status(401).json({
                 success: false,
-                message: "Access denied. No token provided."
+                message: "Access denied. No token provided.",
             });
         }
 
@@ -26,7 +26,7 @@ const authMiddleware = async (req, res, next) => {
         if (!user) {
             return res.status(401).json({
                 success: false,
-                message: "User not found."
+                message: "User not found.",
             });
         }
 
@@ -36,7 +36,7 @@ const authMiddleware = async (req, res, next) => {
     } catch (error) {
         return res.status(401).json({
             success: false,
-            message: "Invalid or expired token."
+            message: "Invalid or expired token.",
         });
     }
 };
